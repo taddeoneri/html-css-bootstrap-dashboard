@@ -17,25 +17,27 @@
                     <div class="container-fluid">
                       <a class="navbar-brand" href="#"><img src="./img/logo.svg" alt="Logo"></a>
                       <div class="flex-grow-1" id="navbarSupportedContent">
-                        <form class="d-flex" role="search">
-                          <input class="form-control me-2" type="search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
+                        <form class="d-flex bg-light-subtle" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
                         </form>
                       </div>
-                      <ul class="navbar-nav mb-2 mb-lg-0">
+                      <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
                         <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link" href="#"><i class="fa-solid fa-list"></i></a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#"><i class="fa-solid fa-circle-question"></i></a>
                         </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
-                          <ul class="dropdown-menu absolute">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                          </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-bell ms-text-accent text-warning" data-bs-toggle="dropdown" id="dropdownMenuLink" role="button"></i>
+                            <ul aria-labelledby="dropdownMenuLink" class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Profilo</a></li>
+                                <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
                         </li>
                       </ul>
                     </div>
@@ -44,11 +46,11 @@
         <main class="d-flex">
             <nav class="sidebar d-flex flex-column justify-content-between">
                 <ul>
-                    <li class="list-group-item"><a class="text-white" href="#"><i class="fa-solid fa-house"></i>Home</a></li>
-                    <li class="list-group-item"><a class="text-white" href="#"><i class="fa-solid fa-chart-simple"></i>Stats</a></li>
-                    <li class="list-group-item"><a class="text-white" href="#"><i class="fa-solid fa-signal"></i>Signals</a></li>
+                    <li class="list-group-item"><a class="text-white text-decoration-none" href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+                    <li class="list-group-item"><a class="text-white text-decoration-none" href="#"><i class="fa-solid fa-chart-simple"></i>Stats</a></li>
+                    <li class="list-group-item"><a class="text-white text-decoration-none" href="#"><i class="fa-solid fa-signal"></i>Signals</a></li>
                 </ul>
-                <a href="#"><i class="fa-solid fa-gear"></i>Admin</a>
+                <a class="text-decoration-none text-white" href="#"><i class="fa-solid fa-gear"></i>Admin</a>
             </nav>
             <div class="content-main">
                 <div class="aside container-fluid bg-primary text-white py-3">
@@ -86,69 +88,173 @@
                                     <table class="table">
                                         <thead>
                                         <tr>
-                                            <th>Nome</th>
-                                            <th>Data inizio</th>
-                                            <th>ROI</th>
-                                            <th>Stato</th>
-                                            <th>Azioni</th>
+                                            <td>Nome</td>
+                                            <td class="text-center">Data inizio</td>
+                                            <td class="text-center">ROI</td>
+                                            <td class="text-center">Stato</td>
+                                            <td class="text-center">Azioni</td>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td>Classe #75</td>
-                                            <td>15 Feb 2021</td>
-                                            <td>20%</td>
-                                            <td><span class="badge text-bg-success">Done</span></td>
-                                            <td><i class="fa-solid fa-pen"></i><i class="fa-solid fa-trash"></i></td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="./img/class-avatar.jpg" alt="Stats"><span>Classe #75</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">15 Feb 2021</td>
+                                            <td class="text-center">20%</td>
+                                            <td class="text-center"><span class="badge text-bg-success">Done</span></td>
+                                            <td>
+                                                <div class="d-flex text-secondary justify-content-center">
+                                                    <div class="border border-2 rounded">
+                                                        <i class="fa-solid fa-pen p-2"></i>
+                                                    </div>
+                                                    <div class="border border-2 rounded">
+                                                        <i class="fa-solid fa-trash p-2"></i>
+                                                    </div>
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>Classe #76</td>
-                                            <td>15 Feb 2021</td>
-                                            <td>20%</td>
-                                            <td><span class="badge text-bg-success">Done</span></td>
-                                            <td><i class="fa-solid fa-pen"></i><i class="fa-solid fa-trash"></i></td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="./img/class-avatar.jpg" alt="Stats"><span>Classe #76</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">16 Feb 2021</td>
+                                            <td class="text-center">20%</td>
+                                            <td class="text-center"><span class="badge text-bg-success">Done</span></td>
+                                            <td>
+                                                <div class="d-flex text-secondary justify-content-center">
+                                                    <div class="border border-2 rounded">
+                                                        <i class="fa-solid fa-pen p-2"></i>
+                                                    </div>
+                                                    <div class="border border-2 rounded">
+                                                        <i class="fa-solid fa-trash p-2"></i>
+                                                    </div>
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>Classe #77</td>
-                                            <td>15 Feb 2021</td>
-                                            <td>20%</td>
-                                            <td><span class="badge text-bg-warning text-white">Process</span></td>
-                                            <td><i class="fa-solid fa-pen"></i><i class="fa-solid fa-trash"></i></td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="./img/class-avatar.jpg" alt="Stats"><span>Classe #77</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">17 Feb 2021</td>
+                                            <td class="text-center">20%</td>
+                                            <td class="text-center"><span class="badge text-bg-warning text-white">Process</span></td>
+                                            <td>
+                                                <div class="d-flex text-secondary justify-content-center">
+                                                    <div class="border border-2 rounded">
+                                                        <i class="fa-solid fa-pen p-2"></i>
+                                                    </div>
+                                                    <div class="border border-2 rounded">
+                                                        <i class="fa-solid fa-trash p-2"></i>
+                                                    </div>
+                                                </div>
+                                            </td> 
                                         </tr>
                                         <tr>
-                                            <td>Classe #78</td>
-                                            <td>15 Feb 2021</td>
-                                            <td>20%</td>
-                                            <td><span class="badge text-bg-success">Done</span></td>
-                                            <td><i class="fa-solid fa-pen"></i><i class="fa-solid fa-trash"></i></td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="./img/class-avatar.jpg" alt="Stats"><span>Classe #78</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">18 Feb 2021</td>
+                                            <td class="text-center">20%</td>
+                                            <td class="text-center"><span class="badge text-bg-success">Done</span></td>
+                                            <td>
+                                                <div class="d-flex text-secondary justify-content-center">
+                                                    <div class="border border-2 rounded">
+                                                        <i class="fa-solid fa-pen p-2"></i>
+                                                    </div>
+                                                    <div class="border border-2 rounded">
+                                                        <i class="fa-solid fa-trash p-2"></i>
+                                                    </div>
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>Classe #79</td>
-                                            <td>15 Feb 2021</td>
-                                            <td>20%</td>
-                                            <td><span class="badge text-bg-danger">Failed</span></td>
-                                            <td><i class="fa-solid fa-pen"></i><i class="fa-solid fa-trash"></i></td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="./img/class-avatar.jpg" alt="Stats"><span>Classe #79</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">19 Feb 2021</td>
+                                            <td class="text-center">20%</td>
+                                            <td class="text-center"><span class="badge text-bg-danger">Failed</span></td>
+                                            <td>
+                                                <div class="d-flex text-secondary justify-content-center">
+                                                    <div class="border border-2 rounded">
+                                                        <i class="fa-solid fa-pen p-2"></i>
+                                                    </div>
+                                                    <div class="border border-2 rounded">
+                                                        <i class="fa-solid fa-trash p-2"></i>
+                                                    </div>
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>Classe #80</td>
-                                            <td>15 Feb 2021</td>
-                                            <td>20%</td>
-                                            <td><span class="badge text-bg-success">Done</span></td>
-                                            <td><i class="fa-solid fa-pen"></i><i class="fa-solid fa-trash"></i></td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="./img/class-avatar.jpg" alt="Stats"><span>Classe #80</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">20 Feb 2021</td>
+                                            <td class="text-center">20%</td>
+                                            <td class="text-center"><span class="badge text-bg-success">Done</span></td>
+                                            <td>
+                                                <div class="d-flex text-secondary justify-content-center">
+                                                    <div class="border border-2 rounded">
+                                                        <i class="fa-solid fa-pen p-2"></i>
+                                                    </div>
+                                                    <div class="border border-2 rounded">
+                                                        <i class="fa-solid fa-trash p-2"></i>
+                                                    </div>
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>Classe #81</td>
-                                            <td>15 Feb 2021</td>
-                                            <td>20%</td>
-                                            <td><span class="badge text-bg-danger">Failed</span></td>
-                                            <td><i class="fa-solid fa-pen"></i><i class="fa-solid fa-trash"></i></td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="./img/class-avatar.jpg" alt="Stats"><span>Classe #81</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">21 Feb 2021</td>
+                                            <td class="text-center">20%</td>
+                                            <td class="text-center"><span class="badge text-bg-danger">Failed</span></td>
+                                            <td>
+                                                <div class="d-flex text-secondary justify-content-center">
+                                                    <div class="border border-2 rounded">
+                                                        <i class="fa-solid fa-pen p-2"></i>
+                                                    </div>
+                                                    <div class="border border-2 rounded">
+                                                        <i class="fa-solid fa-trash p-2"></i>
+                                                    </div>
+                                                </div>
+                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>Classe #82</td>
-                                            <td>15 Feb 2021</td>
-                                            <td>20%</td>
-                                            <td><span class="badge text-bg-success">Done</span></td>
-                                            <td><i class="fa-solid fa-pen"></i><i class="fa-solid fa-trash"></i></td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="./img/class-avatar.jpg" alt="Stats"><span>Classe #82</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">22 Feb 2021</td>
+                                            <td class="text-center">20%</td>
+                                            <td class="text-center"><span class="badge text-bg-success">Done</span></td>
+                                            <td>
+                                                <div class="d-flex text-secondary justify-content-center">
+                                                    <div class="border border-2 rounded">
+                                                        <i class="fa-solid fa-pen p-2"></i>
+                                                    </div>
+                                                    <div class="border border-2 rounded">
+                                                        <i class="fa-solid fa-trash p-2"></i>
+                                                    </div>
+                                                </div>
+                                            </td>
                                         </tr>
                                         </tbody>
                                     </table>
