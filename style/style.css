@@ -28,8 +28,9 @@ main{
 .rounded-pill{
     background-color: #165bba;
 }
-.dropdown-menu[data-bs-popper]{
-    position: absolute;
-    top: 100%;
-    right: 0;
+.absolute{
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
+    left: -150px !important;
 }
