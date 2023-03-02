@@ -7,12 +7,12 @@ body{
     overflow: hidden;
 }
 header{
-    height: 70px;
+    
     width: 100%;
     background-color: #f5f5f5;
 }
 main{
-    height: calc(100% - 70px);
+    height: calc(100% - 56px);
 }
 .sidebar{
     width: 150px;
@@ -27,4 +27,9 @@ main{
 }
 .rounded-pill{
     background-color: #165bba;
+}
+.dropdown-menu[data-bs-popper]{
+    position: absolute;
+    top: 100%;
+    right: 0;
 }
